@@ -1,0 +1,6 @@
+services:
+  controversl.api:
+    image: ${DOCKER_REGISTRY-}controverslapi
+    build:
+      context: .
+      dockerfile: src/Controversl.API/Dockerfile
