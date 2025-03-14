@@ -4,10 +4,11 @@ WORKDIR /app
 EXPOSE 5000
 EXPOSE 5001
 
-
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
+COPY ["Directory.Packages.props", "."]
+COPY ["Directory.Build.props", "."]
 COPY ["src/Controversl.API/Controversl.API.csproj", "src/Controversl.API/"]
 RUN dotnet restore "./src/Controversl.API/Controversl.API.csproj"
 COPY . .
