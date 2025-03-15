@@ -1,6 +1,7 @@
 using Controversl.API.Gemini;
 using Controversl.API.Gemini.Options;
 using Controversl.API.Services;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,5 +33,9 @@ app.UseHttpsRedirection();
 app.MapGet("/generateQuiz", async (QuizService quizService, CancellationToken cancellationToken)
     => await quizService.GenerateQuizAsync(cancellationToken))
 .WithName("generateQuiz");
+
+app.MapGet("/generateQuizByTheme", async ([FromQuery] string theme, QuizService quizService, CancellationToken cancellationToken)
+    => await quizService.GenerateQuizByThemeAsync(theme, cancellationToken))
+.WithName("generateQuizByTheme");
 
 app.Run();
