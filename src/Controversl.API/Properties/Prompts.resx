@@ -117,20 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GenerateQuizPrompt" xml:space="preserve">
-    <value>Generate a JSON object containing a 10-question quiz. Each question should present a controversial fact, and the user must decide whether it is true or false. Make sure answer includes questions with 'True' and 'False' answers. Make them interesting and unique, so there will be less repetitions.
+  <data name="GenerateQuizByThemePrompt" xml:space="preserve">
+    <value>Generate a JSON array containing a 10-question quiz based on the theme: "[USERTHEME]". Each question should present either a controversial fact or a made-up fact related to this theme, and the user must determine whether it is true or false. Ensure the quiz meets the following criteria:
 
-Each question must have the following fields:
-
-"question": The statement for the user to evaluate.
-"correctAnswer": The correct answer as "True" or "False".
-"explanation": A brief factual explanation of why the statement is true or false.
-Output example:
+Diverse subtopics: Cover a variety of angles within the theme to make the quiz engaging.
+Surprising or counterintuitive facts: Use facts that challenge common beliefs or present fictional claims.
+Balanced mix of 'True' and 'False' answers: Ensure that at least 3 questions are 'True' and at least 3 questions are 'False'. The remaining questions can be a mix of both.
+Concise explanations: Keep explanations under 50 words while providing factual clarity.
+Output format:
 [
     {
-      "question": "example question",
-      "correctAnswer": "example answer",
-      "explanation": "example explanation"
+        "question": "example question",
+        "correctAnswer": "True",
+        "explanation": "example explanation"
+    }
+]</value>
+  </data>
+  <data name="GenerateQuizPrompt" xml:space="preserve">
+    <value>Generate a JSON array containing a 10-question quiz. Each question should present either a controversial fact or a made-up fact on a variety of topics, and the user must determine whether it is true or false. Ensure the quiz meets the following criteria:
+
+Diverse topics: Cover a range of subjects such as science, history, geography, technology, and pop culture.
+Surprising or counterintuitive facts: Use facts that challenge common beliefs or present fictional claims.
+Balanced mix of 'True' and 'False' answers: Ensure that at least 3 questions are 'True' and at least 3 questions are 'False'. The remaining questions can be a mix of both.
+Concise explanations: Keep explanations under 50 words while providing factual clarity.
+Output format:
+[
+    {
+        "question": "example question",
+        "correctAnswer": "True",
+        "explanation": "example explanation"
     }
 ]</value>
   </data>

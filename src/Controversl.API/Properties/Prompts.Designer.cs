@@ -61,13 +61,24 @@ namespace Controversl.API.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Generate a JSON object containing a 10-question quiz. Each question should present a controversial fact, and the user must decide whether it is true or false. Make sure answer includes questions with &apos;True&apos; and &apos;False&apos; answers. Make them interesting and unique, so there will be less repetitions.
+        ///   Looks up a localized string similar to Generate a JSON array containing a 10-question quiz based on the theme: &quot;[USERTHEME]&quot;. Each question should present either a controversial fact or a made-up fact related to this theme, and the user must determine whether it is true or false. Ensure the quiz meets the following criteria:
         ///
-        ///Each question must have the following fields:
+        ///Diverse subtopics: Cover a variety of angles within the theme to make the quiz engaging.
+        ///Surprising or counterintuitive facts: Use facts that challenge common beliefs or present fictional claims.
+        ///Balanced mix of &apos;True&apos; and  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string GenerateQuizByThemePrompt {
+            get {
+                return ResourceManager.GetString("GenerateQuizByThemePrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generate a JSON array containing a 10-question quiz. Each question should present either a controversial fact or a made-up fact on a variety of topics, and the user must determine whether it is true or false. Ensure the quiz meets the following criteria:
         ///
-        ///&quot;question&quot;: The statement for the user to evaluate.
-        ///&quot;correctAnswer&quot;: The correct answer as &quot;True&quot; or &quot;False&quot;.
-        ///&quot;explanation&quot;: A brief factual explanation of why t [rest of string was truncated]&quot;;.
+        ///Diverse topics: Cover a range of subjects such as science, history, geography, technology, and pop culture.
+        ///Surprising or counterintuitive facts: Use facts that challenge common beliefs or present fictional claims.
+        ///Balanced mix of &apos;True&apos; and &apos;False&apos; answer [rest of string was truncated]&quot;;.
         /// </summary>
         public static string GenerateQuizPrompt {
             get {
