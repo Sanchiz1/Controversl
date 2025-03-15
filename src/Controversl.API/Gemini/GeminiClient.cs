@@ -13,7 +13,6 @@ public class GeminiClient : IGenerationClient
 {
     private readonly HttpClient _httpClient;
     private readonly GeminiSettings _geminiOptions;
-    private readonly string _apiKey;
     private readonly JsonSerializerSettings _serializerSettings = new()
     {
         ContractResolver = new DefaultContractResolver
@@ -23,12 +22,11 @@ public class GeminiClient : IGenerationClient
     };
     private readonly ILogger<GeminiClient> _logger;
 
-    public GeminiClient(HttpClient httpClient, IOptions<GeminiSettings> geminiOptions, ILogger<GeminiClient> logger, IConfiguration configuration)
+    public GeminiClient(HttpClient httpClient, IOptions<GeminiSettings> geminiOptions, ILogger<GeminiClient> logger)
     {
         _httpClient = httpClient;
         _geminiOptions = geminiOptions.Value;
         _logger = logger;
-        _apiKey = configuration.GetSection("GeminiSettings:Key").Value ?? "";
     }
 
     public async Task<string?> GenerateContentAsync(string prompt, CancellationToken cancellationToken = default)
@@ -63,7 +61,7 @@ public class GeminiClient : IGenerationClient
         var uriBuilder = new UriBuilder(_geminiOptions.Url);
 
         var query = HttpUtility.ParseQueryString(uriBuilder.Query);
-        query["key"] = _apiKey;
+        query["key"] = _geminiOptions.Key;
 
         uriBuilder.Query = query.ToString();
 
