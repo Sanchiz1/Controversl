@@ -1,0 +1,9 @@
+{
+	"name": "Existing Docker Compose (Extend)",
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose.yml"
+	],
+	"service": "controversl.client",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+}

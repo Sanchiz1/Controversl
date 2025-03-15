@@ -1,0 +1,15 @@
+services:
+  controversl.api:
+    image: ${DOCKER_REGISTRY-}controverslapi
+    build:
+      context: .
+      dockerfile: src/Controversl.API/Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+  controversl.client:
+    image: ${DOCKER_REGISTRY-}controverslclient
+    build:
+      context: src/client/
+    ports:
+      - "3000:3000"
