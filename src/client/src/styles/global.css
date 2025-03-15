@@ -24,6 +24,7 @@
   animation: fadeIn 300ms ease-in forwards;
 }
 
+
 @keyframes fadeIn {
   from {
     opacity: 0;
