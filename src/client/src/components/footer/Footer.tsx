@@ -19,6 +19,9 @@ function Footer() {
         <Link to="/" className="px-4 py-4 underline-offset-2 hover:underline sm:py-0">
           About
         </Link>
+        <Link to="/privacy-policy" className="px-4 py-4 underline-offset-2 hover:underline sm:py-0">
+          Privacy Policy
+        </Link>
       </nav>
     </footer>
   );
