@@ -7,11 +7,11 @@ This Privacy Policy describes Our policies and procedures on the collection, use
 
 ### Information We Collect
 
-**Automatic Data Collection:** We keep track of certain information about you when you visit and interact with our Website or Services. This information may include your Internet protocol (IP) address, user settings, MAC address, cookie identifiers, mobile carrier, mobile advertising and other unique identifiers, details about your browser, operating system or device, location information (including inferred general location based off of your IP address).
+**Automatic Data Collection:** We keep track of certain information about you when you visit and interact with our Website or Services. This information may include your Internet protocol (IP) address, user settings, MAC address, cookie identifiers, details about your browser.
 
 ### Cookies
 
-Our website uses cookies to collect information and to improve our Service. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your computer. If you choose to refuse our cookies, you may not be able to use some portions of our Service.
+Our website uses cookies to collect information and to improve our Service. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your computer. If you choose to refuse our cookies, you may not be able to use some portions of our Service. Our website cookies have a 6-month expiraiton period.
 
 ### Use of Your Information
 
