@@ -1,4 +1,5 @@
 import { AnsweredQuestion } from "../../types/AnsweredQuestion";
+import Button from "../button/Button";
 
 type Props = {
   answer: AnsweredQuestion,
@@ -16,11 +17,7 @@ function ExplanationCard({ answer, onContinueClick }: Props) {
         {answer.explanation}
       </div>
       <div className="flex justify-between mt-4 max-w-none">
-        <button
-          onClick={onContinueClick}
-          className="cursor-pointer rounded-md bg-zinc-700 p-2 font-semibold">
-          Okay
-        </button>
+        <Button label="Okay" variant="secondary" onClick={onContinueClick} />
       </div>
     </article>
   );

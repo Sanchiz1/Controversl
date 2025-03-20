@@ -48,7 +48,7 @@ function QuizPage() {
     dispatch(fetchQuestions());
   };
 
-  const handleTryAgain = () => 
+  const handleTryAgain = () =>
     theme.trim().length ?
       handleStartQuizByTheme() :
       handleStartQuiz();

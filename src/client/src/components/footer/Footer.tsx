@@ -3,7 +3,7 @@ import { Link } from "react-router";
 function Footer() {
   return (
     <footer
-      className="mt-auto flex w-full flex-col items-center justify-center gap-y-2 pt-20 pb-4 text-center align-top font-semibold text-gray-400 sm:flex-row sm:justify-between sm:text-xs"
+      className="mt-auto flex w-full flex-col items-center justify-center gap-y-2 pt-6 pb-4 text-center align-top font-semibold text-gray-400 sm:flex-row sm:justify-between sm:text-xs"
     >
       <div className="me-0 sm:me-4">
         &copy; Controversl {new Date().getFullYear()}.
@@ -16,8 +16,11 @@ function Footer() {
         <Link to="/" className="px-4 py-4 underline-offset-2 hover:underline sm:py-0">
           Home
         </Link>
-        <Link to="/" className="px-4 py-4 underline-offset-2 hover:underline sm:py-0">
+        <Link to="/about" className="px-4 py-4 underline-offset-2 hover:underline sm:py-0">
           About
+        </Link>
+        <Link to="/privacy-policy" className="px-4 py-4 underline-offset-2 hover:underline sm:py-0">
+          Privacy Policy
         </Link>
       </nav>
     </footer>

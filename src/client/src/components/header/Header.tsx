@@ -15,7 +15,7 @@ function Header() {
           <Link to="/" className="px-4 py-4 underline-offset-2 hover:underline sm:py-0">
             Home
           </Link>
-          <Link to="/" className="px-4 py-4 underline-offset-2 hover:underline sm:py-0">
+          <Link to="/about" className="px-4 py-4 underline-offset-2 hover:underline sm:py-0">
             About
           </Link>
         </nav>
