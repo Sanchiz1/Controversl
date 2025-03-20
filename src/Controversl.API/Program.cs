@@ -1,5 +1,6 @@
 using Controversl.API.Gemini;
 using Controversl.API.Gemini.Options;
+using Controversl.API.Middleware;
 using Controversl.API.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,8 +32,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors();
 
-app.UseHttpsRedirection();
-
 app.MapGet("/generateQuiz", async (QuizService quizService, CancellationToken cancellationToken)
     => await quizService.GenerateQuizAsync(cancellationToken))
 .WithName("generateQuiz");
@@ -40,5 +39,7 @@ app.MapGet("/generateQuiz", async (QuizService quizService, CancellationToken ca
 app.MapGet("/generateQuizByTheme", async ([FromQuery] string theme, QuizService quizService, CancellationToken cancellationToken)
     => await quizService.GenerateQuizByThemeAsync(theme, cancellationToken))
 .WithName("generateQuizByTheme");
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.Run();

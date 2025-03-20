@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { Question } from '../types/Question';
 
-const BASE_URL = "http//localhost:5000";
+const API_URL = "http://localhost:5000";
 
 export type StateType = {
   questions: Question[];
@@ -18,7 +18,7 @@ const initialState: StateType = {
 export const fetchQuestionsByTheme = createAsyncThunk(
   'quiz/fetchQuestionsByTheme',
   async (theme: string) => {
-    const response = await fetch(`${BASE_URL}/generateQuizByTheme?theme=${theme}`);
+    const response = await fetch(`${API_URL}/generateQuizByTheme?theme=${theme}`);
     if (!response.ok) {
       throw new Error('Failed to load questions');
     }
@@ -30,7 +30,7 @@ export const fetchQuestionsByTheme = createAsyncThunk(
 export const fetchQuestions = createAsyncThunk(
   'quiz/fetchQuestions',
   async () => {
-    const response = await fetch(`${BASE_URL}/generateQuiz`);
+    const response = await fetch(`${API_URL}/generateQuiz`);
     if (!response.ok) {
       throw new Error('Failed to load questions');
     }
