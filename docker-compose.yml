@@ -12,10 +12,19 @@ services:
     image: ${DOCKER_REGISTRY-}controverslclient
     build:
       context: src/client/
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     depends_on:
       - controversl.api
+
+  controversl.storybook:
+    image: ${DOCKER_REGISTRY-}controverslstorybook
+    build:
+      context: src/client/
+      dockerfile: Dockerfile.storybook
+    ports:
+      - "6006:6006"
 
   controversl.docs:
     image: ${DOCKER_REGISTRY-}controversldocs

@@ -1,3 +1,5 @@
+import Button from "../button/Button";
+
 type Props = {
   question: string,
   onTrueClick?: () => void,
@@ -12,16 +14,8 @@ function QuestionCard({ question, onTrueClick, onFalseClick }: Props) {
         {question}
       </div>
       <div className="flex justify-between mt-4 max-w-none">
-        <button
-          onClick={onTrueClick}
-          className="cursor-pointer rounded-md bg-zinc-700 p-2 font-semibold">
-          True
-        </button>
-        <button
-          onClick={onFalseClick}
-          className="cursor-pointer rounded-md bg-zinc-700 p-2 font-semibold">
-          False
-        </button>
+        <Button label="True" variant="secondary" onClick={onTrueClick} />
+        <Button label="False" variant="secondary" onClick={onFalseClick} />
       </div>
     </article>
   );
