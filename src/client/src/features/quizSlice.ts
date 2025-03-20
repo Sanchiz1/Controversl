@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { Question } from '../types/Question';
 
-const BASE_URL = "https://localhost:5001";
+const BASE_URL = "http//localhost:5000";
 
 export type StateType = {
   questions: Question[];

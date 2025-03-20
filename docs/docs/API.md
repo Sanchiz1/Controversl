@@ -8,13 +8,13 @@ sidebar_position: 4
 
 API OpenAPI documents.
 
-Open your browser and navigate to https://localhost:5001/openapi/v1.json to access generated document.
+Open your browser and navigate to http://localhost:5000/openapi/v1.json to access generated document.
 
 ## Swagger Documentation
 
 API includes Swagger documentation for easy exploration and testing of endpoints.
 
-Open your browser and navigate to https://localhost:5001/swagger to access the Swagger UI.
+Open your browser and navigate to http://localhost:5000/swagger to access the Swagger UI.
 
 ## Endpoints
 
@@ -25,7 +25,7 @@ Generates a quiz with random questions.
 #### Example Request
 
 ```bash
-curl "http://localhost:5001/generateQuiz"
+curl "http://localhost:5000/generateQuiz"
 ```
 
 #### Response
@@ -59,7 +59,7 @@ Generates a quiz based on a specific theme.
 #### Example Request
 
 ```bash
-curl "http://localhost:5001/generateQuizByTheme?theme=science"
+curl "http://localhost:5000/generateQuizByTheme?theme=science"
 ```
 
 #### Response
