@@ -39,7 +39,7 @@ Before you begin, ensure you have the following installed on your system:
     }
     ```
 
-    Option 2: Add to User Secrets
+    Option 2: Add to User Secrets (for windows)
 
     If you prefer not to store the API key in the source code, use .NET's user secrets feature:
 
@@ -67,6 +67,14 @@ Before you begin, ensure you have the following installed on your system:
     ```sh
     docker-compose up --build
     ```
+
+4. Access services
+
+   - Client: http://localhost:3000
+   - API: http://localhost:5000
+   - API swager: http://localhost:5000/swagger
+   - Docs: http://localhost:3001
+   - Storybook: http://localhost:6006
 
 ## Want to contribute?
 
