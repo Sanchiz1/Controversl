@@ -7,6 +7,8 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=5000
+    volumes:
+      - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
     ports:
       - "5000:5000"
 
