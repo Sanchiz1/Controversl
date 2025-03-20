@@ -91,4 +91,4 @@ Before you begin, ensure you have the following installed on your system:
 
 ## License
 
-Licensed under [MIT](https://github.com/Sanchiz1/Controversl/blob/develop/LICENSE)
+Licensed under [MIT](https://github.com/Sanchiz1/Controversl/blob/main/LICENSE)
