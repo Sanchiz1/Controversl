@@ -7,9 +7,19 @@ services:
     ports:
       - "5000:5000"
       - "5001:5001"
+
   controversl.client:
     image: ${DOCKER_REGISTRY-}controverslclient
     build:
       context: src/client/
     ports:
       - "3000:3000"
+    depends_on:
+      - controversl.api
+
+  controversl.docs:
+    image: ${DOCKER_REGISTRY-}controversldocs
+    build:
+      context: docs
+    ports:
+      - "3001:3001"
